@@ -10,9 +10,9 @@
 
 # Performance
 
-| Nvidia T4    | XBox Serires X  |  Nvidia 1080 Ti   | Nvidia GT 710  | Nvidia 2080Ti  | 
-| ------------- | -------------   | ----------     | --------      |      ----         |   
-| 17-19 MH/s     | 1.10 MH/s      |   14.65 MH/s    |   0.18MH/s    |   32 MH/s        |  
+| Nvidia Tesla T4    | XBox Serires X  |  Nvidia 1080 Ti   | Nvidia GT 710  | Nvidia 2080Ti  | 
+| -------------      | -------------   | ----------     | --------      |      ----         |   
+| 17-19 MH/s         | 1.10 MH/s      |   14.65 MH/s    |   0.18MH/s    |   32 MH/s        |  
  
 # Install 
 ## XBOX
