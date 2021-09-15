@@ -1,0 +1,96 @@
+﻿<Page 
+    x:Class="xdxminer_app.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:xdxminer_app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded" 
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="963" VerticalAlignment="Stretch" >
+
+    
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="mainPanel"  Width="700">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image HorizontalAlignment="Center"  Height="39" Width="180"  Source="Assets/xdx_miner_logo_686_190.png"/>
+
+
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ComboBox   Grid.Column="0" ItemsSource="{x:Bind coins}" SelectedItem="{x:Bind selectedCoin, Mode=TwoWay}"  DisplayMemberPath="name" 
+                   x:Name="crytoType" Header="Coin" SelectionChanged="crytoType_SelectionChanged" VerticalAlignment="Center" Width="195"   Margin="0,0,0,0" >
+            </ComboBox>
+
+            <ComboBox  Grid.Column="1"  SelectionChanged="servers_SelectionChanged"
+                       x:Name="servers" Text="Choose One" ItemsSource="{x:Bind selectedCoin.poolConfig}"   DisplayMemberPath="desc" 
+                  SelectedValuePath="id"
+          Header="Pool" VerticalAlignment="Center" HorizontalAlignment="Stretch"  />
+        </Grid>
+
+
+        <Grid   Grid.Row="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="399" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Column="0" Header="Wallet Address"  x:Name="username" TextChanging="inputText_TextChanging" 
+            BorderThickness="1,1,1,1" BorderBrush="Black"  TextAlignment="Left"
+                Margin="0,0,0,0" />
+
+            <TextBox Margin="5,0,5,0"   Grid.Column="1" Header="Worker Name"  x:Name="workerName" 
+            BorderThickness="1,1,1,1" BorderBrush="Black"  TextAlignment="Left" Text="xrig1"
+                 />
+        </Grid>
+
+        <Grid  Grid.Row="4"  VerticalAlignment="Center" Margin="0,5,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"  ></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Button   Grid.Column="0"  Width="200" x:Name="start" Content="Start"  Visibility="Visible" Click="start_Click"/>
+            <Button Grid.Column="0" Width="200" x:Name="stop" Content="Stop" Visibility="Collapsed" Click="stop_Click" />
+
+            <TextBlock VerticalAlignment="Center" Grid.Column="2" x:Name="foundShare" HorizontalAlignment="Right" Text="Found Shares: " ></TextBlock>
+            <TextBlock VerticalAlignment="Center" Grid.Column="3" x:Name="foundShareNum" HorizontalAlignment="Left" Text="0" ></TextBlock>
+            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="4" x:Name="acceptedShare" HorizontalAlignment="Right" Text="Accepted Shares: " ></TextBlock>
+            <TextBlock  VerticalAlignment="Center" Grid.Column="5" x:Name="acceptedShareNum" Text="0" HorizontalAlignment="Left" ></TextBlock>
+        </Grid>
+
+
+        <ScrollViewer Grid.Row="5" VerticalAlignment="Stretch"  Margin="0,5,0,10"   Name="output"    ZoomMode="Disabled" BorderThickness="1,1,1,1" BorderBrush="Black"
+        IsTabStop="True" IsVerticalScrollChainingEnabled="True"
+        HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible"
+        VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Hidden">
+            <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch"   Width="660"  TextWrapping="Wrap" x:Name="outputText" Text=""  ></TextBlock>
+        </ScrollViewer>
+    </Grid>
+</Page>

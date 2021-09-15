@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="3ba11e70-1cb6-4c64-ac07-50b7b44bb0c6"
+    Publisher="CN=z123"
+    Version="0.90.33.0" />
+
+  <mp:PhoneIdentity PhoneProductId="3ba11e70-1cb6-4c64-ac07-50b7b44bb0c6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>xdxminer_app</DisplayName>
+    <PublisherDisplayName>z123</PublisherDisplayName>
+    <Logo>Assets\xdxminer_logo_package.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="xdxminer_app.App">
+      <uap:VisualElements
+        DisplayName="XDXMiner"
+        Description="XDXMiner is a proof of concept DirectX implementation of Dagger-Hashimoto miner. Currently it can mine Ethereum and Ethereum Classic."
+        BackgroundColor="white" Square150x150Logo="Assets\xdxminer_logo_medium.png" Square44x44Logo="Assets\xdxminer_logo_app.png">
+        <uap:DefaultTile ShortName="XDX" Square71x71Logo="Assets\xdxminer_logo_small.png" Wide310x150Logo="Assets\xdxminer_logo_wide.png" Square310x310Logo="Assets\xdxminer_logo_large.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen BackgroundColor="white" Image="Assets\xdxminer_logo_splash_screen..png"/>
+        <uap:LockScreen Notification="badge" BadgeLogo="Assets\xdxminer_logo_badge.png"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
