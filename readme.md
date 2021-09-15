@@ -35,6 +35,10 @@ Download and install Dependency packages if any dependency package is missing
 It's C# UWP project build using Visual Studio 2019.
 Open Xdxminer_solition.sln and build solution. 
 
+# Thanks 
+Intial HLSL based on https://github.com/gyf304/ethash-hlsl 
+HLSL is optimized based on https://github.com/chfast/ethash
+
 # License
 Licensed under the GNU General Public License, Version 3.
 
