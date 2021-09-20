@@ -1,5 +1,5 @@
  # Overview
-**XDXMiner** is a proof of concept **DirectX** implementation of Ethereum and Ethereum Classic miner. It can achieve 85% state of the art hashrate on Nivida Tesla T4. It can aslo run in **Xbox Series X/S** under developer mode.
+**XDXMiner** is a proof of concept **DirectX** implementation of Ethereum and Ethereum Classic miner. It can achieve 85% state of the art hashrate on Nivida Tesla T4. It can aslo run on the **Xbox Series X/S** under developer mode.
 
 ![Alt text](./img/xdx_gif_720p.gif "Xbox Series X screenshot")
 
@@ -23,15 +23,16 @@
 Ensure your console is in developer mode. You will need to purchase a developer license from Microsoft.\
 Download the appx file.\
 Navigate to the device portal for your console (displayed in the home screen).\
-Install the appx file by clicking Add in the main page.\
-Set the app to Game mode instead of App mode: Scroll down to DuckStation in the listinng, press the Change View button, select View Details, and change App to Game.\
+Install the .msixbundle file by clicking Add in the main page.
+
+From the Xbox screen, Set the app to Game mode instead of App mode: Scroll down to DuckStation in the listinng, press the Change View button, select View Details, and change App to Game.\
 Launch the app.
 ![Alt text](./img/xdx_upload_to_xbox.gif "Xbox Series X Developer Mode Web Interface")
 
 
 ## PC
 Enable sideloadining in Windows.\
-Download the .msixbundle from release and install it.\
+Download the .msixbundle file from release and install it.\
 You may need to download the .cer certificate file and added to Trusted Person before installing to Windows.\
 Download and install Dependency packages if any dependency package is missing.\
 
@@ -41,7 +42,7 @@ Open Xdxminer_solition.sln and build solution.
 
 # Thanks 
 Intial HLSL based on https://github.com/gyf304/ethash-hlsl  \
-HLSL is optimized based on https://github.com/chfast/ethash \
+HLSL is optimized based on https://github.com/chfast/ethash 
 
 # License
 Licensed under the GNU General Public License, Version 3.
