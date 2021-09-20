@@ -1,6 +1,9 @@
  # Overview
 **XDXMiner** is a proof of concept **DirectX** implementation of Dagger-Hashimoto miner. Currently it can mine Ethereum and Ethereum Classic.
 
+![Alt text](./img/xdx_gif_720p.gif "Xbox Series X screenshot")
+
+
 # Features
 
 * Mine Ethereum and Ethereum in any DirectX enabled Device
@@ -8,7 +11,6 @@
 * Despite poor performance, it supports mining Ethereum Classic in **XBox** under Developer Mode. 
 * Stratum implementation in .NET
 
-![Alt text](./img/xdx_gif.gif?raw=true "Xbox Series X screenshot")
 
 # Performance
 
@@ -24,22 +26,25 @@ Navigate to the device portal for your console (displayed in the home screen).\
 Install the appx file by clicking Add in the main page.\
 Set the app to Game mode instead of App mode: Scroll down to DuckStation in the listinng, press the Change View button, select View Details, and change App to Game.\
 Launch the app.
+![Alt text](./img/xdx_upload_to_xbox.gif "Xbox Series X Developer Mode Web Interface")
+
 
 ## PC
 Enable sideloadining in Windows.\
-To check if sideloading is enabled, head to Settings > Update & Security > For Developers. Ensure the setting here is set to either “Sideload apps” or “Developer mode”. If it’s set to “Windows Store apps”, you won’t be able to install .Appx or .AppxBundle software from outside the Windows Store.
 
-To install them, just double-click a .Appx or .AppxBundle package
+Download the .msixbundle from release and install it.\
 
-Download and install Dependency packages if any dependency package is missing
+You may need to download the .cer certificate file and added to Trusted Person before installing to Windows. \
+
+Download and install Dependency packages if any dependency package is missing/ \
 
 # Build 
 It's C# UWP project build using Visual Studio 2019.
 Open Xdxminer_solition.sln and build solution. 
 
 # Thanks 
-Intial HLSL based on https://github.com/gyf304/ethash-hlsl 
-HLSL is optimized based on https://github.com/chfast/ethash
+Intial HLSL based on https://github.com/gyf304/ethash-hlsl  \
+HLSL is optimized based on https://github.com/chfast/ethash \
 
 # License
 Licensed under the GNU General Public License, Version 3.
