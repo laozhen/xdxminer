@@ -8,6 +8,8 @@
 * Despite poor performance, it supports mining Ethereum Classic in **XBox** under Developer Mode. 
 * Stratum implementation in .NET
 
+![Alt text](./img/xdx_gif.gif?raw=true "Xbox Series X screenshot")
+
 # Performance
 
 | Nvidia Tesla T4    | XBox Serires X  |  Nvidia 1080 Ti   | Nvidia GT 710  | Nvidia 2080Ti  | 
