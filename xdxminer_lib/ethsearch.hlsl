@@ -85,7 +85,7 @@ void hashimoto(out uint result[8], uint headerNonce[10])
 		concat[i] = seed[i % 4][i / 4];
 	}
 	
-	//AllMemoryBarrierWithGroupSync();
+	// AllMemoryBarrierWithGroupSync();
 	
 	keccak_256_768(result, concat);
 

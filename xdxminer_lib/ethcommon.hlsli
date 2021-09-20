@@ -9,13 +9,13 @@
 #endif
 
 #ifndef KECCAK_ROUNDS
-#define KECCAK_ROUNDS 24
+#define KECCAK_ROUNDS 2
 #endif
 
 #define DATASET_PARENTS 256
 #define CACHE_ROUNDS 3
 #define HASH_WORDS 16
-#define ACCESSES 64
+#define ACCESSES 2
 #define MAX_FOUND 6
 
 #define PART_1_COUNT PART_1_VALUE
@@ -149,8 +149,8 @@ void keccak(inout uint2 state[25])
 	Aso = state[23];
 	Asu = state[24];
 
-	[unroll(12)]
-	for (n = 0; n < 24; n += 2)
+	[unroll]
+	for (n = 0; n < KECCAK_ROUNDS; n += 2)
 	{
         // Round (n + 0): Axx -> Exx
 
