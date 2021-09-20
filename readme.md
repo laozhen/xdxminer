@@ -1,5 +1,5 @@
  # Overview
-**XDXMiner** is a proof of concept **DirectX** implementation of Dagger-Hashimoto miner. Currently it can mine Ethereum and Ethereum Classic.
+**XDXMiner** is a proof of concept **DirectX** implementation of Ethereum and Ethereum Classic miner. It can achieve 85% state of the art hashrate on Nivida Tesla T4. It can aslo run in **Xbox Series X/S** under developer mode.
 
 ![Alt text](./img/xdx_gif_720p.gif "Xbox Series X screenshot")
 
@@ -31,12 +31,9 @@ Launch the app.
 
 ## PC
 Enable sideloadining in Windows.\
-
 Download the .msixbundle from release and install it.\
-
-You may need to download the .cer certificate file and added to Trusted Person before installing to Windows. \
-
-Download and install Dependency packages if any dependency package is missing/ \
+You may need to download the .cer certificate file and added to Trusted Person before installing to Windows.\
+Download and install Dependency packages if any dependency package is missing.\
 
 # Build 
 It's C# UWP project build using Visual Studio 2019.
